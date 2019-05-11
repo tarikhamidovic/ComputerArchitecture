@@ -46,7 +46,7 @@ f:
 
   addi $t3, $a0, 0
   sll $t3, $t3, 31
-  beq $t3, $0, paran
+  beq $t3, $0, even
   nop
   sll $t3, $a0, 1
   addi $a0, $t3, 0
@@ -55,7 +55,7 @@ f:
   add $v0, $v0, $t3
   j endf
   nop
-paran:
+even:
   sll $t3, $a0, 1
   addi $a1, $t3, 0
   add $t3, $t3, $a0
