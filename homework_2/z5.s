@@ -10,14 +10,14 @@ test:
   beq $s3, $0, else
   nop
   addi $v0, $0, 0
-  j kraj
+  j end
   nop
 
 else:
   sll $s6, $a0, 1
   addi $v0, $s6, 6
 
-kraj:
+end:
   lw $s6, 24($sp)
   lw $s3, 20($sp)
   addiu $sp, $sp, 24
