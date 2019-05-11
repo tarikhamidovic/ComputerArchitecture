@@ -47,12 +47,12 @@ main:
   lb $s6, 24($t8)
   lb $s7, 28($t8)
 
-  // Vrijednosti iz $t0-$t7 registra smo snimili u memoriju kao
-  // word tj. jednu vrijednost iz registra smo snimili na 4 byte-a 
-  // u memoriji. Instrukcijom lb ucitavamo samo prvi byte sa proslijedjene
-  // adrese, pa ce se samo donjih 8 bita ucitati iz memorije u registre $s?.
-  // Instrukcija lb preostale bite popunjava na osnovu zadnjeg bita, tj. 0 ako je 
-  // zadnji bit 0 i 1 ako je zadnji bit 1.
+  # Vrijednosti iz $t0-$t7 registra smo snimili u memoriju kao
+  # word tj. jednu vrijednost iz registra smo snimili na 4 byte-a 
+  # u memoriji. Instrukcijom lb ucitavamo samo prvi byte sa proslijedjene
+  # adrese, pa ce se samo donjih 8 bita ucitati iz memorije u registre $s?.
+  # Instrukcija lb preostale bite popunjava na osnovu zadnjeg bita, tj. 0 ako je 
+  # zadnji bit 0 i 1 ako je zadnji bit 1.
 
   lbu $s0, ($t8)
   lbu $s1, 4($t8)
@@ -63,11 +63,11 @@ main:
   lbu $s6, 24($t8)
   lbu $s7, 28($t8)
   
-  // Instrukcija lbu ucitava prvih 8 bita iz memorije sa proslijedjene 
-  // adrese u registre, s tim da ce se vrijednosti ucitavati bez 
-  // predznaka (preostali biti se popunjavaju nulama). Ovo implicira
-  // da mozemo dobiti drugacije vrijednosti za razliku od onih koje
-  // dobijemo instrukcijom lb.
+  # Instrukcija lbu ucitava prvih 8 bita iz memorije sa proslijedjene 
+  # adrese u registre, s tim da ce se vrijednosti ucitavati bez 
+  # predznaka (preostali biti se popunjavaju nulama). Ovo implicira
+  # da mozemo dobiti drugacije vrijednosti za razliku od onih koje
+  # dobijemo instrukcijom lb.
 
   addi $v0, $0, 0
   jr $ra
