@@ -14,7 +14,7 @@ main:
   addi $t2, $0, 0
   j uslov
   nop
-tijelo:
+body:
   sll $t3, $t2, 2
   add $t4, $t3, $t0
   add $t5, $t3, $t1
@@ -25,7 +25,7 @@ tijelo:
   addi $t2, $t2, 1
 uslov:
   slti $s0, $t2, 13
-  bne $s0, $0, tijelo
+  bne $s0, $0, body
   nop
   
   lw $ra, 16($sp)
