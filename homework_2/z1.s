@@ -18,12 +18,12 @@ loop:
   lw $t2, ($s0)
   addi $t3, $t2, 0
   sll $t3, $t3, 31
-  beq $t3, $0, paran
+  beq $t3, $0, even
   nop
   sll $t2, $t2, 1
   j save
   nop
-paran:
+even:
   sra $t2, $t2, 1
 save:
   sw $t2, ($s0)
