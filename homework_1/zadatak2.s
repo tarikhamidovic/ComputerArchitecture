@@ -10,16 +10,16 @@ main:
   la $t0, sval
   lb $s0, ($t0)
   
-  // Instrukcijom lb ucitavamo signed byte tj. mozemo
-  // ucitati vrijednost sa memorijske lokacije sval u
-  // opsegu od -128 do 127.
+  # Instrukcijom lb ucitavamo signed byte tj. mozemo
+  # ucitati vrijednost sa memorijske lokacije sval u
+  # opsegu od -128 do 127.
 
   la $t0, uval
   lbu $s1, ($t0)
   
-  // Instrukcijom lbu ucitavamo unsigned byte tj. mozemo
-  // ucitati vrijednost sa memorijske lokacije uval u
-  // opsegu od 0 do 255.
+  # Instrukcijom lbu ucitavamo unsigned byte tj. mozemo
+  # ucitati vrijednost sa memorijske lokacije uval u
+  # opsegu od 0 do 255.
 
   add $s2, $s0, $s1
   
