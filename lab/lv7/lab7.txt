@@ -1,0 +1,11 @@
+1. Napisati rekurzivnu funkciju u MIPS assemblyu 
+koja provjerava da li je proslijedjeni string palindrom. 
+Implementacija funkcije u C-u je data ispod:
+
+int isPalindrome(char* s, int len)
+{
+  if(len < 2)
+    return 1;
+  else
+    return s[0] == s[len - 1] && isPalindrome(s + 1, len - 2);
+}

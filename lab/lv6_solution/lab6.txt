@@ -1,0 +1,27 @@
+1. Modificirati z1.s i napisati ga kao
+zasebnu funkciju koja ima potpis:
+void convert(int, char*);
+Nakon toga napisati main funkciju u C-u i ispisati
+niz nakon konverzije.
+
+2. Modificirati z2.s tako da nakon pronalaska
+najvećeg elementa niza isti ispiše na ekranu kraju 
+funkcije. C kod:
+
+int niz[4] = {1, 2, 9, 5, 3}
+
+int main() {
+    int i = 0;
+    int max = niz[0];
+    while(i < 5) {
+        if (max < niz[i]) {
+            max = niz[i];
+        }
+    }
+    printf("Najveci element: %d", max);
+}
+
+3. Napisati funkciju u MIPS assemblyu koja uzima 
+jedan integeri nazad vraća faktorijel tog integera. 
+Također napisati main funkciju u C-u koja poziva i 
+testira faktorijel funkciju.
